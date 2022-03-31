@@ -10,7 +10,7 @@ contract N2DReward is ERC20, ERC20Burnable, Ownable {
 
   mapping(address => bool) controllers;
   
-  constructor() ERC20("N2DRewards", "N2DR") { }
+  constructor() ERC20("N2DReward", "N2DR") { }
 
   function mint(address to, uint256 amount) external {
     require(controllers[msg.sender], "Only controllers can mint");
